@@ -1,0 +1,29 @@
+<% layout('/layouts/boilerplate') %>
+
+    <div class="row mt-3">
+        <div class="col-8 offset-2">
+            <div class="card">
+                <div class="card-header text-white bg-danger">
+                    Error <%= err.statusCode || 500 %>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <%= err.message || 'Unexpected error occurred' %>
+                    </h5>
+                    <p class="card-text">
+                        Something went wrong. Please try again later.
+                    </p>
+
+                    <% if (process.env.NODE_ENV !=="production" ) { %>
+                        <div class="alert alert-secondary mt-3" role="alert">
+                            <h6>Stack Trace:</h6>
+                            <pre><%= err.stack %></pre>
+                        </div>
+                        <% } %>
+
+                            <a href="/listing" class="btn btn-dark">Back to Explore</a>
+                            <a href="/" class="btn btn-outline-secondary ms-2">Go Home</a>
+                </div>
+            </div>
+        </div>
+    </div>

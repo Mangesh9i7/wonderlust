@@ -1,0 +1,42 @@
+<style>
+    .btn-search {
+        background-color: #fe424d;
+        color: white;
+    }
+
+    .btn-search:hover {
+        background-color: #fe424d;
+        color: white;
+    }
+</style>
+
+<nav class="navbar navbar-expand-md sticky-top" style="min-height: 65px; padding-top: 20px; padding-bottom: 20px;">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/listing"><i class="fa-solid fa-compass"></i> Explore</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="d-flex justify-content-center w-100">
+            <form class="d-flex" style="max-width: 300px; width: 70%;">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-search" type="submit">Search</button>
+            </form>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link" href="/listing/new">Add new Listing</a>
+                <% if (!currUser) { %>
+                    <a class="nav-link" href="/signup"><b>Sign up</b></a>
+                    <a class="nav-link" href="/login"><b>Log in</b></a>
+                    <% } else { %>
+                        <span class="nav-link disabled">
+                            <i class="bi bi-person-circle"></i>
+                            <%= currUser.username %>
+                        </span>
+                        <a class="nav-link" href="/logout"><b>Log out</b></a>
+                        <% } %>
+            </div>
+        </div>
+    </div>
+</nav>

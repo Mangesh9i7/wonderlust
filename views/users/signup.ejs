@@ -1,0 +1,37 @@
+<% layout('layouts/boilerplate') -%>
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <h3 class="text-center mb-4">SignUp on Wonderlust</h3>
+                <form action="/signup" method="POST" class="needs-validation" novalidate>
+                    <div class="mb-3">
+                        <label for="Username" class="form-label">Username</label>
+                        <input type="text" class="form-control" id="Username" name="username"
+                            placeholder="Enter Username" required autocomplete="username">
+
+                        <div class="invalid-feedback">Please enter a Username.</div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="Email" class="form-label">Email</label>
+                        <input type="text" class="form-control" id="Email" name="email" placeholder="Enter Email"
+                            required autocomplete="email">
+                        <div class="invalid-feedback">Please enter a Email.</div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="Password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="Password" name="password"
+                            placeholder="Enter Password" required autocomplete="new-password">
+                        <div class="invalid-feedback">Please enter a strong Password.</div>
+                    </div>
+
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-success">SignUp</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br><br>

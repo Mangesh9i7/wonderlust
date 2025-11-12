@@ -1,0 +1,60 @@
+<% layout('layouts/boilerplate') -%>
+
+    <body>
+        <div class="container mt-5">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-6 mx-auto p-4 bg-light rounded shadow-sm">
+
+                    <form action="/listing/new" method="POST" class="row g-3 needs-validation" novalidate
+                        enctype="multipart/form-data">
+                        <h3 class="mb-4 text-center">Create a New Listing</h3>
+
+                        <div class="col-12">
+                            <label for="title" class="form-label">Title</label>
+                            <input type="text" class="form-control" id="title" name="listing[title]"
+                                placeholder="Enter title" required>
+                            <div class="invalid-feedback">Please enter a title.</div>
+                        </div>
+
+                        <div class="col-12">
+                            <label for="description" class="form-label">Description</label>
+                            <textarea class="form-control" id="description" name="listing[description]"
+                                placeholder="Enter description" rows="3" required></textarea>
+                            <div class="invalid-feedback">Please enter a description.</div>
+                        </div>
+                        <div class="col-12">
+                            <label for="image" class="form-label">Upload listing image</label>
+                            <input type="file" class="form-control" id="image" name="listing[image]" required>
+                            <div class="invalid-feedback">Please upload a image</div>
+
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="price" class="form-label">Price</label>
+                            <input type="number" class="form-control" id="price" name="listing[price]"
+                                placeholder="Enter price" required min="0">
+                            <div class="invalid-feedback">Please enter a valid price.</div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="location" class="form-label">Location</label>
+                            <input type="text" class="form-control" id="location" name="listing[location]"
+                                placeholder="Enter location" required>
+                            <div class="invalid-feedback">Please enter a location.</div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="country" class="form-label">Country Name</label>
+                            <input type="text" class="form-control" id="country" name="listing[country]"
+                                placeholder="Enter country name" required>
+                            <div class="invalid-feedback">Please enter a country name.</div>
+                        </div>
+
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-primary w-100">Add</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
