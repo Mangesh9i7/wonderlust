@@ -1,8 +1,8 @@
 {
   "engines": {
-    "node": "22.19.0"
+    "node": "18.x"
   },
-  "name": "new-project",
+  "name": "wonderlust",
   "version": "1.0.0",
   "description": "",
   "license": "ISC",
