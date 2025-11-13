@@ -2,11 +2,33 @@
     .btn-search {
         background-color: #fe424d;
         color: white;
+        border: none;
+        padding: 0.5rem 1.5rem;
+        font-weight: bold;
+        border-radius: 50px;
+        /* Increased for oval shape */
+        transition: background-color 0.3s ease;
     }
 
     .btn-search:hover {
-        background-color: #fe424d;
+        background-color: #e63b45;
         color: white;
+    }
+
+    .search-form {
+        display: flex;
+        max-width: 400px;
+        width: 100%;
+    }
+
+    .search-form input {
+        border-radius: 50px 0 0 50px;
+        border: 1px solid #ccc;
+        padding: 0.5rem 1rem;
+    }
+
+    .search-form button {
+        border-radius: 0 50px 50px 0;
     }
 </style>
 
@@ -18,8 +40,8 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="d-flex justify-content-center w-100">
-            <form class="d-flex" style="max-width: 300px; width: 70%;">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <form class="search-form" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search listings..." aria-label="Search">
                 <button class="btn btn-search" type="submit">Search</button>
             </form>
         </div>
