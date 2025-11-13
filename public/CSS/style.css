@@ -52,6 +52,10 @@ body {
     gap: 1.5rem;
 }
 
+.navbar-nav .nav-link {
+    white-space: nowrap;
+}
+
 .nav-link {
     color: #333 !important;
     font-weight: 500;
